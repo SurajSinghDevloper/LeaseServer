@@ -24,4 +24,6 @@ public interface LeaseConsumerDemandService {
 
 	List<TeamWiseCollectionReport> getCollectionByTeamWise(String date_from, String date_to, String user_id);
 
+	List<Object[]> getCurrentArrearModuleCollectionReport(String date_from, String date_to, String ward_id);
+
 }

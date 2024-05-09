@@ -19,6 +19,11 @@ public interface LeaseConsumerDemandRepo extends JpaRepository<LeaseConsumerDema
 @Query(value = "SELECT * FROM lease_payment_mode_report WHERE latest_verify_date BETWEEN :startDate AND :endDate AND cash_verify_status = 1 AND (:wardId = 0 OR ward_id = :wardId)", nativeQuery = true)
 List<Object[]> findByDateRangeAndCashVerifyStatusAndWardId(@Param("startDate") Date startDate, @Param("endDate") Date endDate, @Param("wardId") Long wardId);
 
-	
+@Query("SELECT lcd FROM tbl_lease_consumer_dmd lcd " +
+        "WHERE lcd.stampdate BETWEEN :startDate AND :endDate " +
+        "AND (:wardId = 0 OR lcd.wardId = :wardId)")
+ List<Object[]> findByStampdateAndWardIdBetween(@Param("startDate") Date startDate,
+                                                         @Param("endDate") Date endDate,
+                                                         @Param("wardId") Long wardId);
 	
 }

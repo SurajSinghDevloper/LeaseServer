@@ -262,4 +262,28 @@ public class LeaseConsumerDemandServiceImpl implements LeaseConsumerDemandServic
 		
 		return teamReport;
 	}
+
+	@Override
+	public List<Object[]> getCurrentArrearModuleCollectionReport(String date_from, String date_to, String ward_id) {
+		
+		Date fromDate=null;
+		Date toDate=null;
+		try {
+			fromDate = convertStringToDate(date_from);
+			toDate = convertStringToDate(date_to);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Long wardId;
+		if(ward_id.equals("All"))
+			wardId= 0L;
+		else
+		 wardId = Long.parseLong(ward_id);
+		
+		List<Object[]> objectDto= leaseConsumerDemandRepo.findByStampdateAndWardIdBetween(toDate, toDate, wardId);
+		
+		
+		return null;
+	}
 }
