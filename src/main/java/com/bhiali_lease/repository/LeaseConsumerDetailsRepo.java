@@ -8,4 +8,5 @@ import com.bhiali_lease.model.LeaseConsumerDetails;
 @Repository
 public interface LeaseConsumerDetailsRepo extends JpaRepository<LeaseConsumerDetails, Long> {
 
+	public LeaseConsumerDetails findByConsumer_mstr_id(long id);
 }

@@ -1,5 +1,9 @@
 package com.bhiali_lease.service;
 
-public interface LeaseConsumerMasterService {
+import java.util.List;
 
+import com.bhiali_lease.dtos.ConsumerBasicDtlsDTO;
+
+public interface LeaseConsumerMasterService {
+	public List<ConsumerBasicDtlsDTO>allConsumerBasicDetails();
 }

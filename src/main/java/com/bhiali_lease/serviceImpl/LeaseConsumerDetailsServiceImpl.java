@@ -7,4 +7,5 @@ import com.bhiali_lease.service.LeaseConsumerDetailsService;
 @Service
 public class LeaseConsumerDetailsServiceImpl implements LeaseConsumerDetailsService {
 
+	
 }
