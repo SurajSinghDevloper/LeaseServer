@@ -61,10 +61,10 @@ public class ConsumerDemandController {
     	return ResponseEntity.ok(leaseDemandService.getCollectionByTeamWise(date_from,date_to,user_id));
     	
     }
-	 @GetMapping({"/current_arrear_module_collection_report"})
-	    public ResponseEntity<?> currentArrearModuleCollectionReport(@RequestParam("date_from") String date_from,
-	            @RequestParam("date_to") String date_to, @RequestParam("ward_id") String ward_id) {
-	    	return ResponseEntity.ok(leaseDemandService.getCurrentArrearModuleCollectionReport(date_from,date_to,ward_id));
-	    }
+//	 @GetMapping({"/current_arrear_module_collection_report"})
+//	    public ResponseEntity<?> currentArrearModuleCollectionReport(@RequestParam("date_from") String date_from,
+//	            @RequestParam("date_to") String date_to, @RequestParam("ward_id") String ward_id) {
+//	    	return ResponseEntity.ok(leaseDemandService.getCurrentArrearModuleCollectionReport(date_from,date_to,ward_id));
+//	    }
 
 }

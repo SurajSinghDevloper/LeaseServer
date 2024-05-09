@@ -8,10 +8,10 @@
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.lease.bhilai</groupId>
-	<artifactId>bhiali_lease</artifactId>
+	<groupId>gov.municipal.suda</groupId>
+	<artifactId>suda</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>bhiali_lease</name>
+	<name>suda</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
